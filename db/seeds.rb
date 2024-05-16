@@ -7,3 +7,12 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+song = Song.new(title: "Jazz", album: "JazzAlbum", artist: "JazzArtist", year: 1988)
+song.save
+song = Song.new(title: "Metal", album: "MetalAlbum", artist: "MetalArtist", year: 1988)
+song.save
+song = Song.new(title: "PostRock", album: "PostRockAlbum", artist: "PostRockArtist", year: 1988)
+song.save
+song = Song.new(title: "NewWave", album: "NewWaveAlbum", artist: "NewWaveArtist", year: 1988)
+song.save
