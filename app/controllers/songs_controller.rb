@@ -18,4 +18,20 @@ class SongsController < ApplicationController
     @song.save
     render template: 'songs/show'
   end
+
+  def update
+    @song = Song.find(params[:id])
+    @song.update(title: params[:title] || @song.title,
+    artist: params[:artist] || @song.artist,
+    album: params[:album] || @song.album,
+    year: params[:year] || @song.year
+    )
+    render template: 'songs/show'
+  end
+
+  def destroy
+    @song = Song.find(params[:id])
+    @song.destroy
+    render template: 'songs/show'
+  end
 end
